@@ -60,21 +60,26 @@
 											<?php endif; ?>
 										</td>
 										<td>
-										<?php if ($admin->type == 1) : ?>
-												<?php if($user->type != 2): ?>
-													<?php if($user->type == 1): ?>
+											<?php if ($admin->type == 1) : ?>
+												<?php if ($user->type != 2) : ?>
+													<?php if ($user->type == 1) : ?>
 
-													<?php else: ?>
+													<?php else : ?>
 														<a href="index.php?action=updateuser&opt=giveAdm&id=<?php echo $user->id; ?>" class="btn btn-info btn-xs">Dar adm</a>
 													<?php endif; ?>
-												<?php else: ?>
+												<?php else : ?>
 													<a href="index.php?action=updateuser&opt=leaveAdm&id=<?php echo $user->id; ?>" class="btn btn-info btn-xs">Quitar adm</a>
 												<?php endif; ?>
 											<?php endif; ?>
 										</td>
 										<td style="width:175px;">
-											<a href="index.php?view=edituser&id=<?php echo $user->id; ?>" class="btn btn-warning btn-xs">Editar</a>
-											<a href="index.php?action=deluser&id=<?php echo $user->id; ?>" class="btn btn-danger btn-xs">Eliminar</a>
+											<?php if ($admin->type == 1) : ?>
+												<a href="index.php?view=edituser&id=<?php echo $user->id; ?>" class="btn btn-warning btn-xs">Editar</a>
+												<?php if ($user->type != 1) : ?>
+													<a href="index.php?action=deluser&id=<?php echo $user->id; ?>" class="btn btn-danger btn-xs">Eliminar</a>
+												<?php endif; ?>
+											<?php endif; ?>
+
 										</td>
 									</tr>
 							<?php

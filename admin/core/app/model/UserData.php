@@ -12,7 +12,7 @@ class UserData {
 		$this->created_at = "NOW()";
 		$this->post_id = "";
 		$this->user_id = "";
-		$this->status = 1;
+		$this->status = "";
 		$this->notify = 1;
 		$this->email = "";
 		$this->type = "";
@@ -43,6 +43,16 @@ class UserData {
 
 	public function accept(){
 		$sql = "update ".self::$tablename." set notify=2 where id=$this->user_id";
+		Executor::doit($sql);
+	}
+
+	public function editUser(){
+		$sql = "update ".self::$tablename." set name=$this->name,
+											lastname=$this->lastname,
+											username=$this->username,
+											email=$this->email,
+											status=$this->status
+				where id=$this->user_id";
 		Executor::doit($sql);
 	}
 

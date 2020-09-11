@@ -68,7 +68,7 @@
 											<?php endif; ?>
 										</td>
 										<td style="width:175px;">
-											<a href="index.php?view=edituser&id=<?php, echo $user->id; ?>" class="btn btn-warning btn-xs">Editar</a>
+											<a href="index.php?view=edituser&id=<?php echo $user->id; ?>" class="btn btn-warning btn-xs">Editar</a>
 											<a href="index.php?action=deluser&id=<?php echo $user->id; ?>" class="btn btn-danger btn-xs">Eliminar</a>
 										</td>
 									</tr>

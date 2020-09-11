@@ -1,10 +1,12 @@
-<?php $u = UserData::getById($_SESSION["user_id"]); ?>
+<?php	$u = UserData::getById($_SESSION["user_id"]);
+		$admin = UserData::getById($_SESSION['user_id']); ?>
 <?php if ($u->kind == 1) : ?>
 	<section class="content">
 		<div class="row">
 			<div class="col-md-12">
 				<h1>Lista de Administradores</h1>
 				<!-- Single button -->
+				<?php if($admin->type == 1): ?>
 				<div class="btn-group">
 					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						Nuevo <span class="caret"></span>
@@ -13,7 +15,7 @@
 						<li><a href="./?view=newuser&kind=1">Administrador </a></li>
 					</ul>
 				</div>
-
+				<?php endif; ?>
 				<br><br>
 				<?php
 				/*
@@ -32,7 +34,6 @@
 		*/
 				?>
 				<?php
-				$admin = UserData::getById($_SESSION['user_id']);
 				$users = UserData::getAllAdmins();
 				if (count($users) > 0) {
 					// si hay usuarios

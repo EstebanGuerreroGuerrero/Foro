@@ -1,0 +1,130 @@
+.imagen{
+    width:250px;
+    height:200px;
+    padding-bottom:10px;
+}
+
+.imagen-container{
+    display:"inline-block";
+    margin:20px;
+}
+
+.file{
+    width:100%;
+    height:300px;
+    margin-bottom:20px;
+}
+
+.file-container{
+    margin:20px;
+}
+
+.logo{
+    width:41px;
+    height:50px;
+    padding-bottom:5px;
+    padding-top:5px;
+    position: absolute;
+	left: 1;
+	top: 0;
+    
+}
+
+
+.h2 {
+    margin: 60px 15px 0;
+    padding: 0;
+    font-weight: 300;
+}
+
+.h2 span {
+    margin-left: 1em;
+    color: #aaa;
+    font-size: 85%;
+}
+
+.body {
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+.card-custom {
+    width: 250px;
+    height: 250px;
+}
+
+.img { 
+    max-width: 100%; 
+    max-height: 100%; 
+    padding-top:50px;
+    display: block;
+} 
+
+.figure {
+    width: 300px;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+.colur {
+    color:blue;
+}
+
+.contenedor {
+    font-size: 80%;
+}
+
+.figure:hover+span {
+    bottom: -36px;
+    opacity: 1;
+}
+
+/* Sepia */
+.hover09 figure img {
+    -webkit-filter: sepia(100%);
+    filter: sepia(100%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.hover09 figure:hover img {
+    -webkit-filter: sepia(0);
+    filter: sepia(0);
+}
+
+/* Shine */
+.hover14 figure {
+    position: relative;
+}
+.hover14 figure::before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+}
+.hover14 figure:hover::before {
+    -webkit-animation: shine .75s;
+    animation: shine .75s;
+}
+@-webkit-keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+}

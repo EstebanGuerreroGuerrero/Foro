@@ -46,7 +46,7 @@ Este es el layout principal, a partir de este layout o plantilla se muestran el 
               <ul class="dropdown-menu">
                 <li><a href="./?view=home">Mis publicaciones</a></li>
                 <li><a href="./?view=saveposts">Publicaciones Guardadas</a></li>
-                <li><a href="./?view=profile">Editar Perfil</a></li>
+                <li><a href="./?view=viewprofile">Perfil</a></li>
                 <li role="separator" class="divider"></li>
                 
                 <?php 

@@ -16,11 +16,15 @@ class UserData {
 		$this->notify = 1;
 		$this->email = "";
 		$this->type = "";
+		$this->image = "";
+		$this->formacion = "";
+		$this->description = "";
+		$this->especializacion = "";
 	}
 
 	public function add(){
-		$sql = "insert into ".self::$tablename." (name,lastname,email,notify,username,password,status,type,kind,created_at) ";
-		$sql .= "value (\"$this->name\",\"$this->lastname\",\"$this->email\",\"$this->notify\",\"$this->username\",\"$this->password\",1,3,3,$this->created_at)";
+		$sql = "insert into ".self::$tablename." (name,lastname,email,notify,username,password,formacion,especializacion,image,description,status,type,kind,created_at) ";
+		$sql .= "value (\"$this->name\",\"$this->lastname\",\"$this->email\",\"$this->notify\",\"$this->username\",\"$this->password\",\"$this->formacion\",\"$this->especializacion\",\"$this->image\",\"$this->description\",1,3,3,$this->created_at)";
 		Executor::doit($sql);
 	}
 
@@ -31,8 +35,8 @@ class UserData {
 	}
 
 	public function register(){
-		$sql = "insert into ".self::$tablename." (name,lastname,email,password,status,notify,type,kind,created_at) ";
-		$sql .= "value (\"$this->name\",\"$this->lastname\",\"$this->email\",\"$this->password\",1,1,3,3,$this->created_at)";
+		$sql = "insert into ".self::$tablename." (name,lastname,email,username,password,formacion,especializacion,image,description,status,notify,type,kind,created_at) ";
+		$sql .= "value (\"$this->name\",\"$this->lastname\",\"$this->email\",\"$this->username\",\"$this->password\",\"$this->formacion\",\"$this->especializacion\",\"$this->image\",\"$this->description\",1,1,3,3,$this->created_at)";
 		Executor::doit($sql);
 	}
 

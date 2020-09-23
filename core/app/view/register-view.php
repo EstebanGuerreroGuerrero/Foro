@@ -28,6 +28,11 @@
             </div>
 
             <div class="form-group">
+              <label for="exampleInputEmail1">Fono</label>
+              <input type="text" name="fono" class="form-control" id="exampleInputEmail1" placeholder="Fono" required>
+            </div>
+
+            <div class="form-group">
               <label for="inputEmail1" class="col-lg-4 control-label">Descripción *</label>
               <div class="col-md-6">
                 <textarea name="description" required class="form-control" id="content" placeholder="Descripción "></textarea>

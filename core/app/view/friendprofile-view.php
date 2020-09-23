@@ -1,8 +1,9 @@
 <?php
-$user = UserData::getById($_SESSION["user_id"]);
+$user = UserData::getById($_GET["id"]);
 ?>
 
 <div class="container">
+   
     <div class="panel panel-default">
         <div class="panel-body">
             <div class="panel-body2">
@@ -53,7 +54,7 @@ $user = UserData::getById($_SESSION["user_id"]);
 
                                     <li class="glyphicon glyphicon-send"> Formación: <b><?php echo $user->formacion; ?></b></li></br></br>
                                     <li class="glyphicon glyphicon-briefcase"> . . . : </li></br>
-                                    <div style="margin-left:450px;"><a class="btn btn-primary" href="./?view=home">Publicados por ti</b></a></div>
+                                    <div style="margin-left:450px;"><a class="btn btn-primary" href="./?view=friendposts&id=<?php echo $_GET["id"]; ?>">Publicados por <b><?php echo $user->username; ?></b></a></div>
                                 </ul>
                             </div>
                         </div>

@@ -1,7 +1,8 @@
 <?php
-$jb  = PostData::getById($_GET["id"]);
-$img = FilesData::getById($jb->id);
-$carpet = FilesData::getAllById($jb->id);
+  $jb  = PostData::getById($_GET["id"]);
+  $img = FilesData::getById($jb->id);
+  $carpet = FilesData::getAllById($jb->id);
+  $user = UserData::getById($jb->user_id);
 ?>
 
 <div class="container">
@@ -9,7 +10,7 @@ $carpet = FilesData::getAllById($jb->id);
     <div class="col-md-12">
       <h1><?php echo $jb->title; ?></h1>
       <?php if ($jb->image != "") : ?>
-
+      
       <?php endif; ?>
       <br>
       <div class="panel panel-default">
@@ -18,7 +19,8 @@ $carpet = FilesData::getAllById($jb->id);
           <p><?php echo $jb->content; ?></p>
           <label>Categoria</label>
           <p><a href="./?view=posts&id=<?php echo $jb->category_id; ?>"><?php echo CategoryData::getById($jb->category_id)->name; ?></a></p>
-
+          <label>Creador</label>
+          <p><b><a href="./?view=friendprofile&id=<?php echo $user->id; ?>"><?php echo $user->username; ?></a></b></p>
 
           <?php if (count($carpet) > 0) : ?>
 
@@ -50,16 +52,16 @@ $carpet = FilesData::getAllById($jb->id);
                   <hr />
 
                   <!-- <label for="inputEmail1" class="control-label">-   RAR Descargable*</label>
-    <ul>
-      <li>
-      <a href="./core/app/Recursos/files/<?php echo $img->user_id; ?>/<?php echo $img->post_id; ?>/<?php echo $img->rar; ?>" download>Documento.Rar: <?php echo $img->rar; ?></a>
-      </li>
-    </ul> -->
+                    <ul>
+                      <li>
+                      <a href="./core/app/Recursos/files/<?php echo $img->user_id; ?>/<?php echo $img->post_id; ?>/<?php echo $img->rar; ?>" download>Documento.Rar: <?php echo $img->rar; ?></a>
+                      </li>
+                    </ul> -->
                   <hr />
 
 
                   <div class="form-group">
-                    <label for="inputEmail1" class="col-lg-4 control-label">Archivos *</label>
+                    <label for="inputEmail1" class="col-lg-4 control-label">PDF *</label>
 
                     <div class="file-container">
                       <embed class="file" src="./core/app/Recursos/files/<?php echo $img->user_id; ?>/<?php echo $img->post_id; ?>/<?php echo $img->file; ?>" type="application/pdf" />
@@ -142,9 +144,6 @@ $carpet = FilesData::getAllById($jb->id);
               <label for="exampleInputEmail1">Comentarios</label>
               <textarea name="comment" class="form-control" id="exampleInputEmail1" placeholder="Comentarios" required rows="3"></textarea>
             </div>
-
-
-
 
             <button type="submit" class="btn btn-default">Enviar Comentario</button>
           </form>

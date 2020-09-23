@@ -63,8 +63,6 @@
           <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
 
-
-
               <!-- Notification Menu -->
 
               <li class="dropdown user user-menu">
@@ -125,9 +123,11 @@
                                   if (isset($_SESSION["user_id"])) {
                                     echo UserData::getById($_SESSION["user_id"])->name;
                                   }
-                                  ?></span>
+                                  ?>
+                  </span>
                   <span class="caret"></span>
                 </a>
+                
                 <ul class="dropdown-menu">
                   <!-- The user image in the menu -->
 

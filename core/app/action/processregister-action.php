@@ -10,6 +10,7 @@ if (isset($_POST)) {
 			$u->name = $_POST["name"];
 			$u->lastname = $_POST["lastname"];
 			$u->email = $_POST["email"];
+			$u->fono = $_POST["fono"];
 			$u->username = $_POST["username"];
 			$u->password = sha1(md5($_POST["password"]));
 			$u->notify = 1;

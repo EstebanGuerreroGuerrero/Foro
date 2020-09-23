@@ -25,7 +25,12 @@
 
       </h1>
       <br>
-      <form class="form-horizontal" method="post" id="addproduct" action="index.php?action=adduser&opt=<?php if($_GET["kind"]==1){echo "addAdmin";} if($_GET["kind"]==3){echo "addUser";} ?>" role="form">
+      <form class="form-horizontal" method="post" id="addproduct" action="index.php?action=adduser&opt=<?php if ($_GET["kind"] == 1) {
+                                                                                                          echo "addAdmin";
+                                                                                                        }
+                                                                                                        if ($_GET["kind"] == 3) {
+                                                                                                          echo "addUser";
+                                                                                                        } ?>" role="form">
         <input type="hidden" name="kind" value="<?php echo $_GET["kind"]; ?>">
 
         <div class="form-group">
@@ -54,22 +59,61 @@
         </div>
 
         <div class="form-group">
-          <label for="inputEmail1" class="col-lg-2 control-label">Contrase&ntilde;a</label>
+          <label for="exampleInputEmail1" class="col-lg-2 control-label">Fono</label>
           <div class="col-md-6">
-            <input type="password" name="password" class="form-control" id="inputEmail1" placeholder="Contrase&ntilde;a">
+            <input type="text" name="fono" class="form-control" id="exampleInputEmail1" placeholder="Fono" required>
           </div>
         </div>
-
-        <!--- Aqí va codigo si hay muchas actegorías de usuarios o admins. Esta en la carpeta Recursos->codeTrash.php --->
-
-        <p class="alert alert-info">* Campos obligatorios</p>
 
         <div class="form-group">
-          <div class="col-lg-offset-2 col-lg-10">
-            <button type="submit" class="btn btn-primary">Agregar Usuario</button>
+          <label for="inputEmail1" class="col-lg-4 control-label">Descripción *</label>
+          <div class="col-md-6">
+            <textarea name="description" required class="form-control" id="content" placeholder="Descripción "></textarea>
           </div>
         </div>
-      </form>
+        </br>
+        </br>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1" class="col-lg-2 control-label">Formación</label>
+          <div class="col-md-6">
+            <input type="text" name="formacion" class="form-control" id="exampleInputform1" placeholder="Formación" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1" class="col-lg-2 control-label">Especialización</label>
+          <div class="col-md-6">
+            <input type="text" name="especializacion" class="form-control" id="exampleInputesp1" placeholder="Especialización" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inputEmail1" class="col-lg-2 control-label">Foto de Perfil *</label>
+          <div class="col-md-6">
+            <input type="file" name="picture" required>
+          </div>
+        </div>
+        </br>
+        </br>
+
+    <div class="form-group">
+      <label for="inputEmail1" class="col-lg-2 control-label">Contrase&ntilde;a</label>
+      <div class="col-md-6">
+        <input type="password" name="password" class="form-control" id="inputEmail1" placeholder="Contrase&ntilde;a">
+      </div>
     </div>
+
+    <!--- Aqí va codigo si hay muchas actegorías de usuarios o admins. Esta en la carpeta Recursos->codeTrash.php --->
+
+    <p class="alert alert-info">* Campos obligatorios</p>
+
+    <div class="form-group">
+      <div class="col-lg-offset-2 col-lg-10">
+        <button type="submit" class="btn btn-primary">Agregar Usuario</button>
+      </div>
+    </div>
+    </form>
+  </div>
   </div>
 </section>

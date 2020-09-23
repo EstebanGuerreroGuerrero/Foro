@@ -7,7 +7,7 @@ class UserData {
 		$this->lastname = "";
 		$this->username = "";
 		$this->password = "";
-		$this->cpassword = "";
+		$this->fono = "";
 		$this->is_active = "0";
 		$this->created_at = "NOW()";
 		$this->post_id = "";
@@ -19,7 +19,7 @@ class UserData {
 		$this->image = "";
 		$this->formacion = "";
 		$this->description = "";
-		$this->especializacion = "";
+		$this->especiali = "";
 	}
 
 	public function add(){
@@ -35,8 +35,8 @@ class UserData {
 	}
 
 	public function register(){
-		$sql = "insert into ".self::$tablename." (name,lastname,email,username,password,formacion,especializacion,image,description,status,notify,type,kind,created_at) ";
-		$sql .= "value (\"$this->name\",\"$this->lastname\",\"$this->email\",\"$this->username\",\"$this->password\",\"$this->formacion\",\"$this->especializacion\",\"$this->image\",\"$this->description\",1,1,3,3,$this->created_at)";
+		$sql = "insert into ".self::$tablename." (name,lastname,email,fono,username,password,formacion,especializacion,image,description,status,notify,type,kind,created_at) ";
+		$sql .= "value (\"$this->name\",\"$this->lastname\",\"$this->email\",\"$this->fono\",\"$this->username\",\"$this->password\",\"$this->formacion\",\"$this->especializacion\",\"$this->image\",\"$this->description\",1,1,3,3,$this->created_at)";
 		Executor::doit($sql);
 	}
 
@@ -92,6 +92,11 @@ class UserData {
 	
 	public function update_passwd(){
 		$sql = "update ".self::$tablename." set password=\"$this->password\" where id=$this->id";
+		Executor::doit($sql);
+	}
+
+	public function update_datas(){
+		$sql = "update ".self::$tablename." set fono=\"$this->fono\",description=\"$this->description\",formacion=\"$this->formacion\",especializacion=\"$this->especialidad\" where id=$this->id";
 		Executor::doit($sql);
 	}
 
@@ -170,5 +175,3 @@ class UserData {
 	}
 
 }
-
-?>

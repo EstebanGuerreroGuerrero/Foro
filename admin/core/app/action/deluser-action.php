@@ -7,6 +7,10 @@ $posts = PostData::getAllByUser($user->id);
 
 
 if($admin->kind == 1){
+
+	$username = $user->username;
+	$lastname = $user->lastname;
+
 	if($user->id != $admin->id){
 
 		foreach($posts as $post){
@@ -15,9 +19,21 @@ if($admin->kind == 1){
 			$user->delpost();
 		}
 		
+		if ($user->image != null) {
+			$filename = '../core/app/Recursos/img/' . $username . $lastname . '/' . $user->image;
+
+			if (file_exists($filename)) {
+				$success = unlink($filename);
+
+				if (!$success) {
+					throw new Exception("Cannot delete $filename");
+				}
+			}
+		}
+
 		$user->del();
 		Core::alert("Eliminado exitosamente!");
-		Core::redir("./?view=users");
+		Core::redir("./?view=admins");
 
 	}else{
 

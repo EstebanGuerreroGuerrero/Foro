@@ -43,6 +43,7 @@
 								<thead>
 									<th>Nombre completo</th>
 									<th>Email</th>
+									<th>Id del Usuario</th>
 									<th>Activo</th>
 									<th></th>
 									<th></th>
@@ -53,6 +54,7 @@
 									<tr>
 										<td><?php echo $user->name . " " . $user->lastname; ?></td>
 										<td><?php echo $user->email; ?></td>
+										<td><?php echo $user->id; ?></td>
 										<td>
 											<?php if ($user->status == 1) : ?>
 												<i class="glyphicon glyphicon-ok"></i>

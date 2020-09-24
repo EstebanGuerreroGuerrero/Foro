@@ -88,10 +88,11 @@ if (isset($_GET["opt"]) && $_GET["opt"] == "updateprof") {
 					Core::alert("LA IMAGEN NO SE GUARDO CORRECTAMENTE: Solo se admiten archivos: .jpg - .png y .jpeg ");
 				}
 			}
+			$user->image = $image;
 		}
 		//----------------------------------------------------------------------------------------------------------
 
-		$user->image = $image;
+		
 		$user->update_profile();
 
 
@@ -137,7 +138,7 @@ if (isset($_GET["opt"]) && $_GET["opt"] == "updatedatas") {
 		}
 
 		if ($_POST["especialidad"] != "") {
-			$user->especialidad = $_POST["especialidad"];
+			$user->especializacion = $_POST["especialidad"];
 		}
 
 		$user->update_datas();

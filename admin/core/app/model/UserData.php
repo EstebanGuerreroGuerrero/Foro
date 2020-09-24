@@ -19,7 +19,7 @@ class UserData {
 		$this->image = "";
 		$this->formacion = "";
 		$this->description = "";
-		$this->especiali = "";
+		$this->especializacion = "";
 	}
 
 	public function add(){
@@ -29,8 +29,8 @@ class UserData {
 	}
 
 	public function addAdmin(){
-		$sql = "insert into ".self::$tablename." (name,lastname,email,notify,username,password,status,type,kind,created_at) ";
-		$sql .= "value (\"$this->name\",\"$this->lastname\",\"$this->email\",\"$this->notify\",\"$this->username\",\"$this->password\",1,2,1,$this->created_at)";
+		$sql = "insert into ".self::$tablename." (name,lastname,email,fono,notify,username,password,formacion,especializacion,image,description,status,type,kind,created_at) ";
+		$sql .= "value (\"$this->name\",\"$this->lastname\",\"$this->email\",\"$this->fono\",\"$this->notify\",\"$this->username\",\"$this->password\",\"$this->formacion\",\"$this->especializacion\",\"$this->image\",\"$this->description\",1,2,1,$this->created_at)";
 		Executor::doit($sql);
 	}
 
@@ -51,11 +51,24 @@ class UserData {
 	}
 
 	public function editUser(){
-		$sql = "update ".self::$tablename." set name=$this->name,
-											lastname=$this->lastname,
-											username=$this->username,
-											email=$this->email,
-											status=$this->status
+		$sql = "update ".self::$tablename." set 
+											name=\"$this->name\",
+											lastname=\"$this->lastname\",
+											username=\"$this->username\",
+											email=\"$this->email\",
+											image=\"$this->image\"
+				where id=$this->user_id";
+		Executor::doit($sql);
+	}
+
+	public function editdat(){
+		Core::alert($this->status);
+		$sql = "update ".self::$tablename." set 
+											description=\"$this->description\",
+											fono=\"$this->fono\",
+											formacion=\"$this->formacion\",
+											status=\"$this->status\",
+											especializacion=\"$this->especializacion\"
 				where id=$this->user_id";
 		Executor::doit($sql);
 	}
@@ -86,7 +99,7 @@ class UserData {
 	}
 
 	public function update_profile(){
-		$sql = "update ".self::$tablename." set name=\"$this->name\",lastname=\"$this->lastname\",email=\"$this->email\",image=\"$this->image\" where id=$this->id";
+		$sql = "update ".self::$tablename." set name=\"$this->name\",lastname=\"$this->lastname\",email=\"$this->email\",username=\"$this->username\",image=\"$this->image\" where id=$this->id";
 		Executor::doit($sql);
 	}
 	
@@ -96,7 +109,7 @@ class UserData {
 	}
 
 	public function update_datas(){
-		$sql = "update ".self::$tablename." set fono=\"$this->fono\",description=\"$this->description\",formacion=\"$this->formacion\",especializacion=\"$this->especialidad\" where id=$this->id";
+		$sql = "update ".self::$tablename." set fono=\"$this->fono\",description=\"$this->description\",formacion=\"$this->formacion\",especializacion=\"$this->especializacion\" where id=$this->id";
 		Executor::doit($sql);
 	}
 

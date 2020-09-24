@@ -25,7 +25,7 @@
 
       </h1>
       <br>
-      <form class="form-horizontal" method="post" id="addproduct" action="index.php?action=adduser&opt=<?php if ($_GET["kind"] == 1) {
+      <form class="form-horizontal" enctype="multipart/form-data" method="post" id="addproduct" action="index.php?action=adduser&opt=<?php if ($_GET["kind"] == 1) {
                                                                                                           echo "addAdmin";
                                                                                                         }
                                                                                                         if ($_GET["kind"] == 3) {

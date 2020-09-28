@@ -15,9 +15,9 @@
       <br>
       <div class="panel panel-default">
         <div class="panel-body">
-          <label>Contenido</label>
+          <label>Contenído</label>
           <p><?php echo $jb->content; ?></p>
-          <label>Categoria</label>
+          <label>Categoría</label>
           <p><a href="./?view=posts&id=<?php echo $jb->category_id; ?>"><?php echo CategoryData::getById($jb->category_id)->name; ?></a></p>
           <label>Creador</label>
           <p><b><a href="./?view=friendprofile&id=<?php echo $user->id; ?>"><?php echo $user->username; ?></a></b></p>
@@ -35,12 +35,12 @@
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Archivos e Imagenes</h4>
+                    <h4 class="modal-title" id="myModalLabel">Archivos e Imágenes</h4>
                   </div>
                   <div class="modal-body">
 
                     <div>
-                      <label for="inputEmail1" class="control-label">Imagenes*</label>
+                      <label for="inputEmail1" class="control-label">Imágenes*</label>
                       <div>
                         <div class="imagen-container">
                           <img class="imagen" src='./core/app/Recursos/img/<?php echo $img->user_id; ?>/<?php echo $img->post_id; ?>/<?php echo $img->image; ?>' alt="Ejemplo de texto" />
@@ -87,7 +87,7 @@
 
             <form class="form-horizontal" enctype="multipart/form-data" method="post" id="addcfile" action="index.php?action=posts&opt=newfile" role="form">
               <div class="form-group">
-                <label for="inputEmail1" class="col-lg-4 control-label">Imagen destacada (1920x1080)*</label>
+                <label for="inputEmail1" class="col-lg-4 control-label">Imágene destacada (1920x1080)*</label>
                 <div class="col-md-6">
                   <input type="file" name="image">
                 </div>
@@ -114,7 +114,7 @@
 
               <div class="form-group">
                 <div class="col-lg-offset-2 col-lg-10">
-                  <button type="submit" class="btn btn-primary">Agregar Articulo</button>
+                  <button type="submit" class="btn btn-primary">Agregar Artículo</button>
                 </div>
               </div>
 

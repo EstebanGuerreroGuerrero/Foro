@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Psicologos Temuco | Panel de Administracion</title>
+  <title>Psicólogos Temuco | Panel de Administración</title>
   <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
   <!-- Bootstrap 3.3.4 -->
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -50,7 +50,7 @@
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <img class="logo-mini" src="C:\xampp\htdocs\forus\master_foro\admin\core\app\layouts\imagenes\logo.png" />
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>Psicologos Temuco Administrador Foro</b></span>
+          <span class="logo-lg"><b>Psicólogos Temuco Administrador Foro</b></span>
         </a>
 
         <!-- Header Navbar -->
@@ -166,18 +166,18 @@
           -->
           <!-- Sidebar Menu -->
           <ul class="sidebar-menu">
-            <li class="header">ADMINISTRACION</li>
+            <li class="header">ADMINISTRACIÓN</li>
             <?php if (isset($_SESSION["user_id"])) : ?>
 
               <?php $u = UserData::getById($_SESSION["user_id"]); ?>
               <li><a href="./index.php?view=home"><i class='fa fa-dashboard'></i> <span>Inicio</span></a></li>
-              <li><a href="./index.php?view=posts&opt=all"><i class='fa fa-file-text'></i> <span>Articulos</span></a></li>
+              <li><a href="./index.php?view=posts&opt=all"><i class='fa fa-file-text'></i> <span>Artículos</span></a></li>
               <li><a href="./index.php?view=comments"><i class='fa fa-comment'></i> <span>Comentarios</span></a></li>
 
               <li class="treeview">
                 <a href="#">
                   <i class="fa fa-th-list"></i>
-                  <span>Catalogos</span>
+                  <span>Catálogos</span>
                   <span class="pull-right-container">
                     <i class="fa fa-angle-left pull-right"></i>
                   </span>
@@ -186,7 +186,7 @@
                   <li><a href="./?view=themes&opt=all"><i class="fa fa-circle-o"></i> Temas</a></li>
                 </ul>
                 <ul class="treeview-menu">
-                  <li><a href="./?view=categories&opt=all"><i class="fa fa-circle-o"></i> Categorias</a></li>
+                  <li><a href="./?view=categories&opt=all"><i class="fa fa-circle-o"></i> Categorías</a></li>
                 </ul>
               </li>
 
@@ -222,7 +222,7 @@
 
       <footer class="main-footer">
         <div class="pull-right hidden-xs">
-          <b>Version</b> v0.1
+          <b>Versión</b> v0.1
         </div>
       </footer>
     <?php else : ?>
@@ -233,7 +233,7 @@
       <?php else : ?>
         <div class="login-box">
           <div class="login-logo">
-            <a href="./"><b>Psicologos Temuco</b></a>
+            <a href="./"><b>Psicólogos Temuco</b></a>
           </div><!-- /.login-logo -->
           <div class="login-box-body">
             <form action="./?action=processlogin" method="post">

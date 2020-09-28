@@ -44,7 +44,7 @@
 									<th>Nombre completo</th>
 									<th>Email</th>
 									<th>Id del Usuario</th>
-									<th>Activo</th>
+									<th>Actívo</th>
 									<th></th>
 									<th></th>
 								</thead>

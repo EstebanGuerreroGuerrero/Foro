@@ -1,9 +1,9 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h1>Registro de usuarios</h1>
+      <h1>Regístros de usuarios</h1>
       <div class="panel panel-default">
-        <div class="panel-heading">Registro de usuarios</div>
+        <div class="panel-heading">Regístro de usuarios</div>
         <div class="panel-body">
 
           <form enctype="multipart/form-data" method="post" action="./?action=processregister">
@@ -18,7 +18,7 @@
             </div>
 
             <div class="form-group">
-              <label for="exampleInputEmail1">Correo electronico</label>
+              <label for="exampleInputEmail1">Correo electrónico</label>
               <input type="email" name="email" required class="form-control" id="exampleInputEmail1" placeholder="Correo electronico">
             </div>
 
@@ -68,7 +68,7 @@
 
             <div class="checkbox">
               <label>
-                <input type="checkbox" name="accept" required> Acepto los terminos y condiciones
+                <input type="checkbox" name="accept" required> Acepto los términos y condiciones
               </label>
             </div>
             <button type="submit" class="btn btn-default">Registrarme</button>

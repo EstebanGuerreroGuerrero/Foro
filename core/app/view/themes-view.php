@@ -3,7 +3,7 @@
 
                 <div>
 
-                    <h2 class="h1-text">Bienvenido a Psicologos Temuco</h2>
+                    <h2 class="h1-text">Bienvenido a Psicólogos Temuco</h2>
                     </br>
                     </br>
                     <p style="text-align:center;" class="lead">Seleccione una de nuestras Categorías. . .</p>
@@ -38,7 +38,7 @@
                         </div>
                     </div>
                     <?php else : ?>
-                        <p class="alert alert-info">No hay categorias</p>
+                        <p class="alert alert-info">No hay categorías</p>
                     <?php endif; ?>
 
 

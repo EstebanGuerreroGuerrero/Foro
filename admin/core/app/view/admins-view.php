@@ -1,4 +1,5 @@
-<?php	$u = UserData::getById($_SESSION["user_id"]);
+<?php
+		$u = UserData::getById($_SESSION['user_id']); 
 		$admin = UserData::getById($_SESSION['user_id']); ?>
 <?php if ($u->kind == 1) : ?>
 	<section class="content">
@@ -44,7 +45,7 @@
 								<thead>
 									<th>Nombre completo</th>
 									<th>Email</th>
-									<th>Activo</th>
+									<th>Actívo</th>
 									<th></th>
 									<th></th>
 								</thead>

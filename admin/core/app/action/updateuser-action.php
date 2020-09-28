@@ -11,7 +11,7 @@ if(isset($_GET["opt"]) && $_GET["opt"]=="giveAdm"){
 else if (isset($_GET["opt"]) && $_GET["opt"]=="leaveAdm"){
 
     $ux = new UserData();
-    $ux->id = $_POST["user_id"];
+    $ux->id = $_GET['id'];
     $ux->leaveAdm();
 
     Core::redir("./?view=users");

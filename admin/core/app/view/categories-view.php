@@ -3,12 +3,12 @@
 <section class="content">
 <div class="row">
 	<div class="col-md-12">
-		<h1>Categorias</h1>
+		<h1>Categorías</h1>
 
 
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
-Nueva Categria
+Nueva Categoría
 </button>
 
 <!-- Modal -->
@@ -17,7 +17,7 @@ Nueva Categria
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Nueva Categria</h4>
+        <h4 class="modal-title" id="myModalLabel">Nueva Categoría</h4>
       </div>
       <div class="modal-body">
 		<form class="form-horizontal" enctype="multipart/form-data" method="post" id="addcategory" action="index.php?action=categories&opt=add" role="form">
@@ -52,7 +52,7 @@ Nueva Categria
 <?php endforeach; ?>
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
-      <button type="submit" class="btn btn-primary">Agregar Categria</button>
+      <button type="submit" class="btn btn-primary">Agregar Categoría</button>
     </div>
   </div>
 </form>
@@ -105,7 +105,7 @@ Nueva Categria
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Editar Categria</h4>
+        <h4 class="modal-title" id="myModalLabel">Editar Categoría</h4>
       </div>
       <div class="modal-body">
 		<form class="form-horizontal" method="post" id="addproduct" action="index.php?action=categories&opt=update" role="form">
@@ -125,7 +125,7 @@ Nueva Categria
   </div>
 
   <div class="form-group">
-    <label for="inputEmail1" class="col-lg-4 control-label">Categoria </label>
+    <label for="inputEmail1" class="col-lg-4 control-label">Categoría </label>
     <div class="col-md-6">
     <select name="theme_id" class="form-control" required>
     <option value="">-- SELECCIONAR --</option>
@@ -142,7 +142,7 @@ Nueva Categria
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
     <input type="hidden" name="category_id" value="<?php echo $user->id;?>">
-      <button type="submit" class="btn btn-primary">Actualizar Categria</button>
+      <button type="submit" class="btn btn-primary">Actualizar Categoría</button>
     </div>
   </div>
 </form>
@@ -159,7 +159,7 @@ Nueva Categria
 
 
 		}else{
-			echo "<p class='alert alert-danger'>No hay Categorias</p>";
+			echo "<p class='alert alert-danger'>No hay Categorías</p>";
 		}
 
 

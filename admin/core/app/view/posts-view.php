@@ -1,12 +1,12 @@
 <section class="content">
 <div class="row">
 	<div class="col-md-12">
-		<h1>Articulos</h1>
+		<h1>Artículos</h1>
 
 
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
-Nuevo Articulo
+Nuevo Artículo
 </button>
 
 <!-- Modal -->
@@ -15,14 +15,14 @@ Nuevo Articulo
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Nuevo Articulo</h4>
+        <h4 class="modal-title" id="myModalLabel">Nuevo Artículo</h4>
       </div>
       <div class="modal-body">
 		<form class="form-horizontal" enctype="multipart/form-data" method="post" id="addcategory" action="index.php?action=posts&opt=add" role="form">
 
 
   <div class="form-group">
-    <label for="inputEmail1" class="col-lg-4 control-label">Titulo*</label>
+    <label for="inputEmail1" class="col-lg-4 control-label">Título*</label>
     <div class="col-md-6">
       <input type="text" name="title" required class="form-control" id="title" placeholder="Titulo">
     </div>
@@ -43,7 +43,7 @@ Nuevo Articulo
   </div>
 
   <div class="form-group">
-    <label for="inputEmail1" class="col-lg-4 control-label">Categoria </label>
+    <label for="inputEmail1" class="col-lg-4 control-label">Categoría </label>
     <div class="col-md-6">
     <select name="category_id" class="form-control" required>
     <option value="">-- SELECCIONAR --</option>
@@ -57,7 +57,7 @@ Nuevo Articulo
 
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
-      <button type="submit" class="btn btn-primary">Agregar Articulo</button>
+      <button type="submit" class="btn btn-primary">Agregar Artículo</button>
     </div>
   </div>
 </form>
@@ -81,10 +81,10 @@ Nuevo Articulo
     <div class="box-body">
 			<table class="table table-bordered table-hover datatable">
 			<thead>
-			<th>Titulo</th>
-      <th>Categoria</th>
+			<th>Título</th>
+      <th>Categoría</th>
       <th>Activo</th>
-      <th>Creacion</th>
+      <th>Creación</th>
 			<th></th>
 			</thead>
 			<?php
@@ -119,14 +119,14 @@ Nuevo Articulo
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Editar Articulo</h4>
+        <h4 class="modal-title" id="myModalLabel">Editar Artículo</h4>
       </div>
       <div class="modal-body">
 		<form class="form-horizontal" method="post" id="addproduct" action="index.php?action=posts&opt=update" role="form">
 
 
   <div class="form-group">
-    <label for="inputEmail1" class="col-lg-4 control-label">Titulo*</label>
+    <label for="inputEmail1" class="col-lg-4 control-label">Título*</label>
     <div class="col-md-6">
       <input type="text" name="title" value="<?php echo $user->title;?>" class="form-control" id="title" placeholder="Titulo">
     </div>
@@ -149,7 +149,7 @@ Nuevo Articulo
   </div>
 
   <div class="form-group">
-    <label for="inputEmail1" class="col-lg-4 control-label">Categoria </label>
+    <label for="inputEmail1" class="col-lg-4 control-label">Categoría </label>
     <div class="col-md-6">
     <select name="category_id" class="form-control" required>
     <option value="">-- SELECCIONAR --</option>
@@ -163,7 +163,7 @@ Nuevo Articulo
 
 
   <div class="form-group">
-    <label for="inputEmail1" class="col-lg-4 control-label" >Esta activo</label>
+    <label for="inputEmail1" class="col-lg-4 control-label" >Está activo</label>
     <div class="col-md-6">
 <div class="checkbox">
     <label>
@@ -176,7 +176,7 @@ Nuevo Articulo
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
     <input type="hidden" name="user_id" value="<?php echo $user->id;?>">
-      <button type="submit" class="btn btn-primary">Actualizar Articulo</button>
+      <button type="submit" class="btn btn-primary">Actualizar Artículo</button>
     </div>
   </div>
 </form>
@@ -193,7 +193,7 @@ Nuevo Articulo
 
 
 		}else{
-			echo "<p class='alert alert-danger'>No hay Articulos</p>";
+			echo "<p class='alert alert-danger'>No hay Artículos</p>";
 		}
 
 

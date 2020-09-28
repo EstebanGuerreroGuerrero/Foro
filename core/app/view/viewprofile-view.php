@@ -32,7 +32,7 @@ $user = UserData::getById($_SESSION["user_id"]);
                             if ($user->id == $_SESSION["user_id"]) : ?>
                                 <div style="margin-left:550px; margin-top:20px;"><a href="index.php?view=profile&id=<?php echo $user->id; ?>" class="btn btn-warning">Editar</a></div>
                             <?php endif; ?>
-                            <div style="margin-top:10px; font-style: italic; font-size: x-large;">¿Quien soy?</div>
+                            <div style="margin-top:10px; font-style: italic; font-size: x-large;">¿Quién soy?</div>
                             <hr>
                             <div>
                                 <p><?php echo $user->description; ?></p>
@@ -46,14 +46,14 @@ $user = UserData::getById($_SESSION["user_id"]);
                                     <li class="glyphicon glyphicon-list-alt"> Especialidad: <b><?php echo $user->especializacion; ?></b></li></br></br>
                                     <li class="glyphicon glyphicon-user"> Actividad usuario: <b> 
                                                                         <?php if($user->status == 1):?> 
-                                                                        Usuario activo <?php if($user->type == 1 || $user->type == 2): ?>/ Moderador <?php endif; ?>
+                                                                        Usuario actívo <?php if($user->type == 1 || $user->type == 2): ?>/ Moderador <?php endif; ?>
                                                                         <?php else: ?> 
-                                                                            Usuario inactivo 
+                                                                            Usuario inactívo 
                                                                         <?php endif; ?></b></li></br></br>
 
                                     <li class="glyphicon glyphicon-send"> Formación: <b><?php echo $user->formacion; ?></b></li></br></br>
                                     <li class="glyphicon glyphicon-briefcase"> . . . : </li></br>
-                                    <div style="margin-left:450px;"><a class="btn btn-primary" href="./?view=home">Publicados por ti</b></a></div>
+                                    <div style="margin-left:450px;"><a class="btn btn-primary" href="./?view=home">Publicados por tí</b></a></div>
                                 </ul>
                             </div>
                         </div>

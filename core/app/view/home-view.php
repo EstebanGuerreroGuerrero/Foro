@@ -36,9 +36,9 @@ if ($user == null) {
           <div class="box-body">
             <table class="table table-bordered table-hover datatable">
               <thead>
-                <th>Titulo</th>
-                <th>Seccion</th>
-                <th>Creacion</th>
+                <th>Título</th>
+                <th>Sección</th>
+                <th>Creación</th>
                 <th></th>
               </thead>
               <?php
@@ -69,14 +69,14 @@ if ($user == null) {
                   <div class="modal-content">
                     <div class="modal-header">
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                      <h4 class="modal-title" id="myModalLabel">Editar Articulo</h4>
+                      <h4 class="modal-title" id="myModalLabel">Editar Artículo</h4>
                     </div>
                     <div class="modal-body">
                       <form class="form-horizontal" method="post" id="addproduct" action="index.php?action=posts&opt=update" role="form">
 
 
                         <div class="form-group">
-                          <label for="inputEmail1" class="col-lg-4 control-label">Titulo*</label>
+                          <label for="inputEmail1" class="col-lg-4 control-label">Título*</label>
                           <div class="col-md-6">
                             <input type="text" name="title" value="<?php echo $user->title; ?>" class="form-control" id="title" placeholder="Titulo">
                           </div>
@@ -106,7 +106,7 @@ if ($user == null) {
                         <div class="form-group">
                           <div class="col-lg-offset-2 col-lg-10">
                             <input type="hidden" name="user_id" value="<?php echo $user->id; ?>">
-                            <button type="submit" class="btn btn-primary">Actualizar Articulo</button>
+                            <button type="submit" class="btn btn-primary">Actualizar Artículo</button>
                           </div>
                         </div>
                       </form>
@@ -123,7 +123,7 @@ if ($user == null) {
 
 
       } else {
-        echo "<p class='alert alert-danger'>No hay Articulos</p>";
+        echo "<p class='alert alert-danger'>No hay Artículos</p>";
       }
 
 

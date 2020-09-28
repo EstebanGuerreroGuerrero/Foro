@@ -26,14 +26,14 @@ Este es el layout principal, a partir de este layout o plantilla se muestran el 
           <span class="icon-bar"></span>
         </button>
 
-        <a class="navbar-brand" href="./"><b>Foro Psicologos Temuco</b></a>
+        <a class="navbar-brand" href="./"><b>Foro Psicólogos Temuco</b></a>
       </div>
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li><a href="./">INICIO</a></li>
           <?php if (!isset($_SESSION["user_id"])) : ?>
-            <li><a href="./?view=login">LOGIN</a></li>
+            <li><a href="./?view=login">LÓGIN</a></li>
             <li><a href="./?view=register">REGISTRO</a></li>
           <?php endif; ?>
           <li><a href="https://psicologostemuco.com/">PSICÓLOGOS TEMUCO</a></li>  
@@ -46,7 +46,7 @@ Este es el layout principal, a partir de este layout o plantilla se muestran el 
               <ul class="dropdown-menu">
                 <li><a href="./?view=home">Mis publicaciones</a></li>
                 <li><a href="./?view=saveposts">Publicaciones Guardadas</a></li>
-                <li><a href="./?view=viewprofile">Perfil</a></li>
+                <li><a href="./?view=viewprofile">Perfíl</a></li>
                 <li role="separator" class="divider"></li>
                 
                 <?php 
@@ -77,7 +77,7 @@ Este es el layout principal, a partir de este layout o plantilla se muestran el 
       <div class="col-md-12">
         <br>
         <hr>
-        <p class="text-muted text-center">Foro psicologos Temuco v0.01</p>
+        <p class="text-muted text-center">Foro psicólogos Temuco v0.01</p>
       </div>
     </div>
   </div>

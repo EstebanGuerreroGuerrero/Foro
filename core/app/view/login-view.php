@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row">
-    <h1 class="text-center">Foro Psicologos Temuco</h1></br></br>
+    <h1 class="text-center">Foro Psicólogos Temuco</h1></br></br>
     <div class="col-md-12">
       <div class="row">
         <div class="col-md-4 col-md-offset-4">
           <div class="panel panel-default">
-            <div class="panel-heading text-center">Login</div>
+            <div class="panel-heading text-center">Lógin</div>
             <div class="panel-body">
 
               <form method="post" action="./?action=access&o=login">

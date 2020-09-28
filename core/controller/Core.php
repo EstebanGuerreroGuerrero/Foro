@@ -40,7 +40,6 @@ class Core {
 
 	}
 
-
 	public static function getFlashes(){
 
 		if(isset($_SESSION["flashes"])){

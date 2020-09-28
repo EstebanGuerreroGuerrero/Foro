@@ -4,7 +4,7 @@ if(Core::g("opt","all")):
 <div class="container">
 <div class="row">
 <div class="col-md-12">
-<h1>CATEGORIAS</h1>
+<h1>CATEGORíAS</h1>
 <?=Bs::a("Nuevo","./?view=cats&opt=new");?>
 <br><br>
 <?php Core::getFlashes(); 
@@ -28,7 +28,7 @@ $tablearray["body"]=$data;
 
 ?>
 <div class="panel panel-default">
-<div class="panel-heading">Categorias</div>
+<div class="panel-heading">Categorías</div>
 
 <?=Table::render($tablearray);?>
 </div>

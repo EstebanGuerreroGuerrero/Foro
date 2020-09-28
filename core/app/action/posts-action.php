@@ -70,7 +70,9 @@ if(isset($_GET["opt"]) && $_GET["opt"]=="add"){
 }
 
 else if(isset($_GET["opt"]) && $_GET["opt"]=="update"){
+
 	$user = PostData::getById($_POST["user_id"]);
+	
 	if($user->user_id==$_SESSION["user_id"]){
 
 	$user->title = $_POST["title"];

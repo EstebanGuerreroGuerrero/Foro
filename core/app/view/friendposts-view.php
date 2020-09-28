@@ -38,9 +38,9 @@ if ($user == null) {
                     <div class="box-body">
                         <table class="table table-bordered table-hover datatable">
                             <thead>
-                                <th>Titulo</th>
-                                <th>Seccion</th>
-                                <th>Creacion</th>
+                                <th>Título</th>
+                                <th>Sección</th>
+                                <th>Creación</th>
                                 <th></th>
                             </thead>
                             <?php
@@ -67,7 +67,7 @@ if ($user == null) {
 
 
             } else {
-                echo "<p class='alert alert-danger'>No hay Articulos</p>";
+                echo "<p class='alert alert-danger'>No hay Artículos</p>";
             }
 
 
